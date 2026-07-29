@@ -1,0 +1,31 @@
+data:
+    data_name: deepcad_f0_30
+    path_train: "/data/songhx24/dataset_smz/deepcad/f030_filted_2_train.h5"
+    path_val: "/data/songhx24/dataset_smz/deepcad/f030_filted_2_val.h5"
+    path_test: "/data/songhx24/dataset_smz/deepcad/f030_filted_2_test.h5"
+    max_faces: 30
+    max_edges: 200
+    raw_uv_grid: 16
+    vae_latent_dim: 128
+
+model:
+    epochs: 6000
+    batch_size: 2048
+    val_per_epoch: 0  #not use
+    save_per_epoch: 200
+    log_per_epoch: 1
+    parallel: True
+    lr: 5e-4
+    betas: [0.90, 0.95]
+    weight_decay: 1e-6
+    loss_weight: 1
+    num_workers: 8
+    pretrained_vae_path: "./exp/vae_geom_deepcad_f0_30/checkpoints/deepcad_f0_30_vae_best.pth"
+    output_dir: "./exp"
+    output_tag: "diffusion_geom"
+    use_ema: False
+    pretrained_path: "./exp/diffusion_geom_deepcad_f0_30/checkpoints/deepcad_f0_30_geom_diff_best.pth"
+    last_epoch: 0
+    use_aug: False
+
+

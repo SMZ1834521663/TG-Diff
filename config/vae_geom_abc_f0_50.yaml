@@ -1,0 +1,29 @@
+data:
+    data_name: abc_f0_50
+    path_train: "/data/songhx24/dataset_smz/abc/f050_filted_2_train.h5"
+    path_val: "/data/songhx24/dataset_smz/abc/f050_filted_2_val.h5"
+    path_test: "/data/songhx24/dataset_smz/abc/f050_filted_2_test.h5"
+    max_faces: 50 
+    max_edges: 400
+    raw_uv_grid: 16
+
+model:
+    epochs: 1000
+    batch_size: 256
+    val_per_epoch: 10
+    save_per_epoch: 10
+    log_per_epoch: 1   
+    parallel: True
+    lr: 5e-4  
+    betas: [0.90,0.95]
+    weight_decay: 1e-6
+    point_loss_weight: 1 
+    point_mask_loss_weight: 1e-3
+    kl_loss_weight: 1e-8
+    mmd_loss_weight: 1e-4
+    num_workers: 8
+    output_dir: "./exp"
+    output_tag: "vae_geom"
+    pretrained_path: "./exp/vae_geom_abc_f0_50/checkpoints/abc_f0_50_vae_best.pth"
+    use_mmd: True
+    use_aug: True

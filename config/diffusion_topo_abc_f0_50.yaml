@@ -1,0 +1,31 @@
+data:
+    data_name: abc_f0_50
+    path_train: "/data/songhx24/dataset_smz/abc/f050_filted_2_train.h5"
+    path_val: "/data/songhx24/dataset_smz/abc/f050_filted_2_val.h5"
+    path_test: "/data/songhx24/dataset_smz/abc/f050_filted_2_test.h5"
+    path_train_pkl: "./topo/pkl/f050_train_topo_canonical.pkl"
+    max_faces: 50
+    max_edges: 400
+    raw_uv_grid: 16
+    vae_latent_dim: 128
+
+model:
+    epochs: 6000
+    batch_size: 1536
+    val_per_epoch: 0  #not use
+    save_per_epoch: 100
+    log_per_epoch: 1
+    parallel: True
+    lr: 5e-4
+    betas: [0.90, 0.95]
+    weight_decay: 1e-6
+    loss_weight: 1
+    num_workers: 8
+    output_dir: "./exp"
+    output_tag: "diffusion_topo"
+    use_ema: False
+    pretrained_path: "./exp/diffusion_topo_abc_f0_50/checkpoints/abc_f0_50_topo_diff_best.pth"
+    last_epoch: 0
+    use_aug: False
+
+
