@@ -53,6 +53,7 @@ python data_process/data_pkl2h5.py --mode deepcad --option train --MIN_FACE 0 --
 
 ## Training 
 Just need to modify the config, as shown in the following example.
+
 deepcad_f030
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3 python train_vae_geom.py --cfg_path  ./config/vae_geom_deepcad_f0_30.yaml
@@ -69,6 +70,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python train_diffusion_geom.py --cfg_path  ./config
 
 ## Testing
 Just need to modify the config, as shown in the following example.At the same time, it is necessary to modify the weight addresses inside the config.
+
 deepcad_f030
 ```
 python test_diffusion_topo.py --cfg_path  ./config/diffusion_topo_deepcad_f0_30.yaml
