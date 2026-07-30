@@ -34,6 +34,7 @@ If there are missing packages, simply pip install them yourself.
 
 ## Dataset
 Download [ABC](https://archive.nyu.edu/handle/2451/43778) STEP files (100 folders). 
+
 Download [Furniture Data](https://cad.onshape.com). Use data_process/down_furniture.py. 
 The split file of the training data is available (https://drive.google.com/drive/folders/1BwSRTzOFHUcx_YEOcfxLb3WokpQ8kXmO)
 
@@ -57,7 +58,8 @@ abc_f050
 1. CUDA_VISIBLE_DEVICES=0,1,2,3 python train_vae_geom.py --cfg_path  ./config/vae_geom_abc_f0_50.yaml
 2. CUDA_VISIBLE_DEVICES=0,1,2,3 python train_diffusion_topo.py --cfg_path  ./config/diffusion_topo_abc_f0_50.yaml
 3. CUDA_VISIBLE_DEVICES=0,1,2,3 python train_diffusion_geom.py --cfg_path  ./config/diffusion_geom_abc_f0_50.yaml
-4. 
+
+
 ## Testing
 Just need to modify the config, as shown in the following example.At the same time, it is necessary to modify the weight addresses inside the config.
 1. python test_diffusion_topo.py --cfg_path  ./config/diffusion_topo_deepcad_f0_30.yaml
@@ -67,10 +69,4 @@ Just need to modify the config, as shown in the following example.At the same ti
 
 ## Checkpoint
 Zip compression of checkpoints in (https://drive.google.com/drive/folders/1I4rGc7EIkaMG3wmkmf6XGskOiE8G5SJ0)
-
-
-
-
-
-
 
